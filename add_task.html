@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Task</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/styles.css" />
+  <style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Main content should expand to push the footer down */
+  .content {
+    flex: 1;
+    width: 100%;
+  }
+
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    background: rgba(102, 1, 1, 0.7);
+    padding: 10px 0;
+    opacity: 2;
+    width: 100%;
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <!-- Video Background -->
+  <div class="video-container">
+    <video autoplay loop muted>
+      <source src="static/background.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- Form Container -->
+  <div class="login-box">
+    <h1>Add a New Task</h1>
+    <form id="task-form">
+      <div class="user-box">
+        <input type="text" id="task-name" required />
+        <label for="task-name">Task Name</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="stakeholder" required />
+        <label for="stakeholder">Stakeholder</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="responsible" required />
+        <label for="responsible">Responsible</label>
+      </div>
+      <div class="user-box">
+        <input type="date" id="due-date" required />
+        <label for="due-date"></label>
+      </div>
+      <div class="user-box">
+        <select id="status" required>
+          <option value="Incomplete">Incomplete</option>
+          <option value="Completed">Completed</option>
+          <option value="In Progress">In Progress</option>
+        </select>
+        <label for="status">Status</label>
+      </div>
+      <div class="user-box">
+        <input type="number" id="completion-percent" min="0" max="100" value="0" required />
+        <label for="completion-percent">Completion %</label>
+      </div>
+      <button type="submit">Add Task</button>
+    </form>
+  </div>
+
+  <!-- Back to Task List -->
+  <div style="text-align: center; margin-top: 20px">
+    <a href="index.html" class="button">Back to Task List</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 DXC Technology zTPF Engineering Team - Task Manager
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

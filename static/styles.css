@@ -1,0 +1,226 @@
+/* Video container styling */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Keeps the video in the background */
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* General body styling over the video */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background: none; /* Ensure the background doesn't overlay the video */
+}
+
+/* Header styling with hover animation */
+header img {
+  display: block;
+  margin: 20px auto;
+  width: 400px;
+  height: 70px;
+  transition: transform 0.5s ease-in-out;
+}
+
+header img:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+/* Titles with a glowing effect */
+h1,
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 0px 0px 10px #00d4ff, 0px 0px 20px #0078ff;
+  color: #ffffff;
+}
+
+/* Buttons with glowing effect */
+a.button, button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 25px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Poppins", Arial, sans-serif;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 10px auto;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, #0078ff, #00d4ff);
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.8);
+    border: none;
+  }
+
+  a.button:hover, button:hover {
+    background: #03f40f;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03f40f,
+                0 0 25px #03f40f,
+                0 0 50px #03f40f,
+                0 0 100px #03f40f;
+  }
+/* Table styling */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border: 2px solid rgba(0, 122, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 122, 255, 0.6);
+  opacity: 0.95;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(72, 255, 0, 0.3);
+  color: #ffffff;
+  opacity: 5;
+}
+
+th {
+  background: linear-gradient(135deg, #0078ff, #00d4ff);
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px #00d4ff;
+  color: #ffffff;
+  opacity: 5;
+}
+
+td:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  background: rgba(102, 1, 1, 0.863);
+  padding: 10px 0;
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+/* Form Container Styling */
+.login-box {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(13, 13, 14, 0.603);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  opacity: 10;
+}
+
+.login-box h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Form Input Fields */
+.login-box .user-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.login-box .user-box input,
+.login-box .user-box select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label,
+.login-box .user-box select:focus ~ label,
+.login-box .user-box select:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 12px;
+}
+
+/* Button Styling */
+.login-box a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.login-box a:hover {
+  background: #03f40f;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03f40f, 0 0 25px #03f40f, 0 0 50px #03f40f,
+    0 0 100px #03f40f;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+}
